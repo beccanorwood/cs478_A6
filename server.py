@@ -63,7 +63,6 @@ def predict():
                     continue
                 else:
                     category = classifcation[idx]
-                    print(category)
 
 
     return jsonify(str("The image you've submitted is classified as a: " + str(category)))
