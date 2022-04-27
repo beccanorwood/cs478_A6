@@ -28,3 +28,8 @@ Section B: Testing the Web Server and Clients
     to the server. 
 
 
+Section C: Screen Captures of Test Run
+
+![Alt text](/screenshots/server_cmd_1.png?raw=true "Optional Title")
+
+

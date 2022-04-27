@@ -21,4 +21,4 @@ if __name__ == '__main__':
         }
 
         response = requests.post(PREDICTION_URL, headers=headers, data = json.dumps(payload))
-        print(response.text, response.status_code)
+        print(response.text, "Status Code: ", response.status_code)

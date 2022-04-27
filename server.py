@@ -19,14 +19,15 @@ MODEL_PATH = 'Z:/School/CSUSM/Spring 2022/CS 478/Assignments/Norwood_Assignment6
 IMAGE_FILE_PATH = 'Z:/School/CSUSM/Spring 2022/CS 478/Assignments/Norwood_Assignment6/client_images/'
 
 
-# initialize our Flask application
+"""initialize our Flask application"""
 app = Flask(__name__)
 
-#load the model
+"""load the model"""
 MODEL_PATH = 'Z:/School/CSUSM/Spring 2022/CS 478/Assignments/Norwood_Assignment6/model.h5'
-model = load_model(MODEL_PATH)
+# model = load_model(MODEL_PATH)
+model = load_model('.\model.h5')
 
-
+"""Default route that returns application info"""
 @app.route('/', methods=['GET'])
 def index():
     return (SERVER_INFO['NAME'] + 
@@ -34,9 +35,9 @@ def index():
             SERVER_INFO['CURRENT_DATE_TIME'])
 
 
-"""Test the model with test images"""
-"""here are some images located at: https://oreil.ly/dEUpx"""
 
+"""Test the model with test images"""
+"""Images from: https://oreil.ly/dEUpx"""
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
 
@@ -54,7 +55,6 @@ def predict():
 
         images = np.vstack([x])
         classes = model.predict(images, batch_size = 10)
-        print(classes)
 
         #Iterate through numpy array of images and set proper category dependent on array position
         for outerloop in classes:
