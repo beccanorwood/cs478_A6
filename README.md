@@ -1,7 +1,7 @@
 # cs478_A6
 Section A: ML Web Server Description
+Author: Rebecca Norwood
 
-    Author: Rebecca Norwood
     Overview: This application uses Python Flask, Tensorflow, Keras, 
             and more machine learning libraries/modules to classify
             an image that a user enters via the command line. The image
