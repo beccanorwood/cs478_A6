@@ -30,6 +30,9 @@ Section B: Testing the Web Server and Clients
 
 Section C: Screen Captures of Test Run
 
-![Starting Flask Server](/screenshots/server_cmd_1.png?raw=true)
+![Server Command](/screenshots/server_cmd_1.png?raw=true)
+![Flask Server](/screenshots/server_cmd_2.png?raw=true)
 
-
+![Client Command](/screenshots/client_cmd.png?raw=true)
+![Client Command with Image (1)](/screenshots/client_cmd_with_img.png?raw=true)
+![Client Command with image (2)](/screenshots/client_cmd_with_img2.png?raw=true)
