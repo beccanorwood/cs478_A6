@@ -1,6 +1,7 @@
 # cs478_A6
-Section A: ML Web Server Description
 Author: Rebecca Norwood
+
+Section A: ML Web Server Description
 
     Overview: This application uses Python Flask, Tensorflow, Keras, 
             and more machine learning libraries/modules to classify
