@@ -15,15 +15,11 @@ SERVER_INFO = {
     'CURRENT_DATE_TIME': '\n' + d.today().strftime("%B %d, %Y")
 }
 
-MODEL_PATH = 'Z:/School/CSUSM/Spring 2022/CS 478/Assignments/Norwood_Assignment6/model.h5'
-IMAGE_FILE_PATH = 'Z:/School/CSUSM/Spring 2022/CS 478/Assignments/Norwood_Assignment6/client_images/'
-
-
 """initialize our Flask application"""
 app = Flask(__name__)
 
 """load the model"""
-MODEL_PATH = 'Z:/School/CSUSM/Spring 2022/CS 478/Assignments/Norwood_Assignment6/model.h5'
+# MODEL_PATH = 'Z:/School/CSUSM/Spring 2022/CS 478/Assignments/Norwood_Assignment6/model.h5'
 # model = load_model(MODEL_PATH)
 model = load_model('.\model.h5')
 
@@ -47,8 +43,8 @@ def predict():
         posted_data = request.get_json()
         data = posted_data['data']
 
-        image_param = IMAGE_FILE_PATH + data
-        img = image.load_img(image_param, target_size=(150,150))
+        image_path = 'client_images\\' + data
+        img = image.load_img(image_path, target_size=(150,150))
 
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis = 0)
